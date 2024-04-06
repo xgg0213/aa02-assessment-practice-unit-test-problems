@@ -15,6 +15,13 @@ console.log(cat); // { name: "Willie", color: "orange", toy: "yarn" }
 
 function keyAdderUniqueVal(object, key, value) {
 	// Your code here 
+	for (let key1 in object) {
+		if (object[key1] === value) {
+			return object;
+		}
+	}
+	object[key] = value;
+	return object;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

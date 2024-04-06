@@ -21,6 +21,10 @@ console.log(clothesList); // ['tshirt', 'pants']
 
 function shoppingList(list) {
   // Your code here 
+  return func = (string) => {
+    list.push(string);
+    return list;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

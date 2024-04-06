@@ -13,11 +13,33 @@ duplicateCharMinCount("What about a longer string?", 3) // ["a", "t", " "]
 
 function countCharacters(string) {
 	// Your code here 
+	let obj = {};
+
+	for (let i = 0; i < string.length; i++) {
+		let keys = Object.keys(obj);
+		if (!keys.includes(string[i])) {
+			obj[string[i]]= 1;
+		} else {
+			obj[string[i]] += 1;
+		}
+	}
+	return obj;
 }
 
 function duplicateCharMinCount(string, minCount) {
 	// Your code here 
+	let obj = countCharacters(string);
+	let res = [];
+	
+	for (let key in obj) {
+		if (obj[key]>=minCount) {
+			res.push(key);
+		}
+	}
+	// console.log(res);
+	return res;
 }
 
+duplicateCharMinCount("apple", 2) // ["p"]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = duplicateCharMinCount;

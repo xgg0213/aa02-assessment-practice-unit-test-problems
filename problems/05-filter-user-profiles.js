@@ -39,6 +39,14 @@ state.
 
 function filterUserProfiles(users, filter) {
   // Your code here 
+  let filtered = users.filter(el => filter(el));
+  let res = [];
+
+  for (let el of filtered) {
+    res.push(el.name);
+  }
+
+  return res;
 }
 
 // To test the example, comment out the code below and run the following command
