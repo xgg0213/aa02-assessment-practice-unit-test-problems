@@ -19,7 +19,7 @@ function pickyMyMap(arr, cb) {
 	// Your code here 
 	let res = [];
 	for (let el of arr) {
-		if (cb(el) !== false && cb(el) !== 0) {
+		if (cb(el) !== false && cb(el) !== 0) { // can also simply use if (cb(el)) => this states that the cb(el) has to be truthy
 			res.push(cb(el));
 		}
 	}
